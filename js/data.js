@@ -45,7 +45,8 @@ const ANDONG_DATA = {
       transportLabel: "Bus & Transport:",
       whereToEatLabel: "Recommended Area:",
       priceLabel: "Est. Price:",
-      footerText: "Discover Andong - International Tourist Guide & Digital Companion"
+      footerText: "Discover Andong - International Tourist Guide & Digital Companion",
+      cityHallBtn: "City Hall"
     },
     ko: {
       siteTitle: "안동 여행 가이드",
@@ -92,7 +93,8 @@ const ANDONG_DATA = {
       transportLabel: "교통 편:",
       whereToEatLabel: "추천 장소:",
       priceLabel: "예상 가격:",
-      footerText: "Discover Andong - 안동 관광 종합 디지털 가이드"
+      footerText: "Discover Andong - 안동 관광 종합 디지털 가이드",
+      cityHallBtn: "안동시청"
     }
   },
 

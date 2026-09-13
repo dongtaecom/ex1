@@ -107,6 +107,31 @@ header {
   box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
+/* City Hall Link Button */
+.cityhall-btn {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  padding: 0.5rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.cityhall-btn:hover {
+  background: var(--accent-cyan);
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
 /* Language Toggle Button */
 .lang-toggle-btn {
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(56, 189, 248, 0.15));

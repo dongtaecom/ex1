@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const langBtnText = document.getElementById('lang-toggle-text');
     if (langBtnText) langBtnText.textContent = currentLang === 'en' ? '한국어' : 'English';
 
+    // City Hall button text & URL
+    const cityHallBtnText = document.getElementById('cityhall-btn-text');
+    const cityHallBtn = document.getElementById('cityhall-btn');
+    if (cityHallBtnText) cityHallBtnText.textContent = dict.cityHallBtn;
+    if (cityHallBtn) cityHallBtn.href = currentLang === 'en' ? 'https://www.andong.go.kr/eng/main.do' : 'https://www.andong.go.kr';
+
     // Tabs
     const tabAttractionSpan = document.querySelector('#tab-btn-attractions span');
     if (tabAttractionSpan) tabAttractionSpan.textContent = dict.tabAttractions;
