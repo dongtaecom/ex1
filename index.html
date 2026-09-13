@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Andong - Essential Foreign Tourist Companion & Travel Guide</title>
+  <meta name="description" content="Official digital companion for international tourists visiting Andong, South Korea. Explore UNESCO World Heritage sites, Hahoe Folk Village, Andong Jjimdak, bus guides, and taxi card phrases.">
+  
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fas fa-landmark" style="color: var(--primary-gold);"></i>
+        <span id="site-logo-text">ANDONG <span style="font-weight: 300;">GUIDE</span></span>
+        <span class="logo-badge" id="site-logo-badge">KOREA</span>
+      </a>
+      
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <ul class="nav-tabs">
+          <li><button class="nav-btn active" data-tab="attractions" id="tab-btn-attractions"><i class="fas fa-compass"></i> <span>Attractions</span></button></li>
+          <li><button class="nav-btn" data-tab="food" id="tab-btn-food"><i class="fas fa-utensils"></i> <span>Cuisine</span></button></li>
+          <li><button class="nav-btn" data-tab="itinerary" id="tab-btn-itinerary"><i class="fas fa-route"></i> <span>Itinerary</span></button></li>
+          <li><button class="nav-btn" data-tab="phrases" id="tab-btn-phrases"><i class="fas fa-language"></i> <span>Audio Phrases</span></button></li>
+          <li><button class="nav-btn" data-tab="transport" id="tab-btn-transport"><i class="fas fa-bus"></i> <span>Transport</span></button></li>
+          <li><button class="nav-btn" data-tab="quiz" id="tab-btn-quiz"><i class="fas fa-sparkles"></i> <span>Travel Quiz</span></button></li>
+        </ul>
+
+        <!-- Language Toggle Button -->
+        <button id="lang-toggle-btn" class="lang-toggle-btn" title="Switch Language / 언어 변경">
+          <i class="fas fa-globe"></i> <span id="lang-toggle-text">한국어</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 id="hero-title">Explore Andong, Spirit of Korea</h1>
+      <p id="hero-desc">Your complete interactive companion to UNESCO World Heritage sites, rich Joseon traditions, and legendary local cuisine.</p>
+      
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search attractions (e.g., Hahoe Village, Jjimdak, Moonlight Bridge)..." />
+        <button id="search-btn"><i class="fas fa-search"></i> <span id="search-btn-text">Search</span></button>
+      </div>
+
+      <div class="filter-pills">
+        <button class="pill-btn active" data-filter="all" id="pill-all">All Spots</button>
+        <button class="pill-btn" data-filter="heritage" id="pill-heritage">UNESCO Heritage</button>
+        <button class="pill-btn" data-filter="night" id="pill-night">Night Views</button>
+        <button class="pill-btn" data-filter="kdrama" id="pill-kdrama">K-Drama Spots</button>
+        <button class="pill-btn" data-filter="nature" id="pill-nature">Nature & Parks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Body Content Panes -->
+  <main>
+
+    <!-- Tab 1: Attractions Explorer -->
+    <section id="tab-attractions" class="tab-pane active">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem;">
+        <h2 id="attractions-title">Must-Visit Top Attractions</h2>
+        <span style="color:var(--text-muted); font-size:0.9rem;" id="attractions-sub">Showing curated spots in Andong</span>
+      </div>
+      <div id="attractions-grid" class="grid-cards">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Tab 2: Cuisine & Must-Eat Food -->
+    <section id="tab-food" class="tab-pane">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 id="cuisine-title">Authentic Andong Delicacies</h2>
+        <p style="color:var(--text-muted);" id="cuisine-sub">From savory braised chicken to historic scholar bibimbap and famous traditional spirits.</p>
+      </div>
+      <div id="foods-grid" class="grid-cards">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Tab 3: Trip Itinerary Planner -->
+    <section id="tab-itinerary" class="tab-pane">
+      <div class="itinerary-container">
+        <!-- Recommended Presets -->
+        <div>
+          <h2 style="margin-bottom: 1rem;" id="itinerary-preset-title"><i class="fas fa-map-marked-alt" style="color:var(--primary-gold);"></i> Recommended Itineraries</h2>
+          <div id="preset-itineraries">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+
+        <!-- Custom Planner -->
+        <div>
+          <div class="planner-box">
+            <div class="planner-header">
+              <h3 id="itinerary-custom-title"><i class="fas fa-bookmark" style="color:var(--accent-cyan);"></i> My Custom Trip Plan</h3>
+              <span style="font-size:0.85rem; color:var(--text-muted);">Saved in browser</span>
+            </div>
+            
+            <div id="itinerary-empty-state" style="text-align:center; padding: 2rem 1rem; color: var(--text-muted);">
+              <i class="fas fa-plus-circle" style="font-size: 2rem; margin-bottom: 0.8rem; opacity: 0.5;"></i>
+              <p id="itinerary-empty-title">Your trip plan is empty!</p>
+              <p style="font-size:0.85rem; margin-top:0.3rem;" id="itinerary-empty-sub">Click "+ Plan" on any attraction card to add it here.</p>
+            </div>
+
+            <div id="custom-itinerary-list" class="itinerary-list">
+              <!-- Custom added items rendered here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Audio Survival Phrasebook -->
+    <section id="tab-phrases" class="tab-pane">
+      <!-- Taxi Card Banner -->
+      <div class="taxi-banner">
+        <div class="taxi-banner-text">
+          <h3 id="taxi-banner-title"><i class="fas fa-taxi"></i> Korean Audio & Taxi Cards</h3>
+          <p id="taxi-banner-sub">Tap the speaker button to hear native Korean audio playback using built-in speech synthesis!</p>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 1.5rem;" id="phrases-title">Essential Tourist Phrases</h2>
+      <div id="phrases-grid" class="phrase-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Tab 5: Transportation & Survival Guide -->
+    <section id="tab-transport" class="tab-pane">
+      <h2 style="margin-bottom: 1rem;" id="transport-title"><i class="fas fa-bus-alt" style="color:var(--accent-cyan);"></i> Transportation & Travel Tips</h2>
+      <p style="color:var(--text-muted); margin-bottom: 1.5rem;" id="transport-sub">Everything you need to navigate Andong smoothly from Seoul or Busan.</p>
+
+      <div id="transport-guide-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:1.5rem; margin-top:1.5rem;">
+        <h3 style="color:var(--accent-rose); margin-bottom:0.8rem;" id="emergency-title"><i class="fas fa-headset"></i> Emergency & Helpline Contacts</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; color:var(--text-main);">
+          <li><strong>1330 Korea Travel Hotline:</strong> Free 24/7 tourist assistance (English, Japanese, Chinese)</li>
+          <li><strong>112:</strong> Police Emergency</li>
+          <li><strong>119:</strong> Fire & Medical Emergency</li>
+          <li><strong>Andong Tourist Info Center:</strong> +82-54-856-3013</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tab 6: Travel Quiz -->
+    <section id="tab-quiz" class="tab-pane">
+      <div class="quiz-card">
+        <h2 style="margin-bottom:0.5rem; background: linear-gradient(135deg, #fff, var(--primary-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" id="quiz-title">Find Your Andong Travel Vibe</h2>
+        <p style="color:var(--text-muted); font-size:0.95rem;" id="quiz-sub">Answer 2 quick questions to get personalized spot recommendations.</p>
+        
+        <div id="quiz-box" style="margin-top:1.5rem;">
+          <!-- Rendered by app.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Attraction Detail & Taxi Card Modal -->
+  <div id="detail-modal" class="modal-overlay">
+    <div class="modal-box">
+      <div id="modal-body-content">
+        <!-- Injected via openDetailModal() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1280px; margin:0 auto;">
+      <p id="footer-text">Discover Andong - International Tourist Guide & Digital Companion</p>
+      <p style="font-size:0.8rem; margin-top:0.4rem; color:var(--text-muted);">
+        Crafted with pure HTML5, CSS3 & JavaScript • No external server or build tools required.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
